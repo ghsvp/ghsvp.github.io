@@ -1,0 +1,26 @@
+{
+    "editor.tabSize": 2,
+    "grammarly.selectors": [
+        {
+            "language": "latex",
+            "scheme": "file"
+        },
+        {
+            "language": "markdown",
+            "scheme": "file"
+        },
+        {
+            "language": "plaintext",
+            "scheme": "file"
+        },
+        {
+            "language": "restructuredtext",
+            "scheme": "file"
+        },
+        {
+            "language": "typescriptreact",
+            "scheme": "file",
+            "pattern": "app/page.tsx"
+        }
+    ]
+}
