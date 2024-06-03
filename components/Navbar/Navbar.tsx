@@ -193,36 +193,34 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
   );
 }
 
+export const NavbarData = [
+  {
+    text: "Home",
+    href: "/",
+    icon: "home",
+  },
+  {
+    text: "About Us",
+    href: "/about",
+    icon: "info",
+  },
+  {
+    text: "Past Actions",
+    href: "/actions",
+    icon: "history",
+  },
+  {
+    text: "Resources",
+    href: "/resources",
+    icon: "star",
+  },
+  {
+    text: "Contact Us",
+    href: "/contact",
+    icon: "email",
+  },
+];
+
 export function ConstNavbar() {
-  return (
-    <Navbar
-      items_={[
-        {
-          text: "Home",
-          href: "/",
-          icon: "home",
-        },
-        {
-          text: "About Us",
-          href: "/about",
-          icon: "info",
-        },
-        {
-          text: "Past Actions",
-          href: "/actions",
-          icon: "history",
-        },
-        {
-          text: "Resources",
-          href: "/resources",
-          icon: "star",
-        },
-        {
-          text: "Contact Us",
-          href: "/contact",
-          icon: "email",
-        },
-      ]}
-    />
-  );
+  return <Navbar items_={NavbarData} />;
 }

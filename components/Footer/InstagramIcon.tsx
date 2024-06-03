@@ -8,7 +8,7 @@ export default function InstagramIcon() {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid"
-        className=" text-primary-1-50"
+        className=" text-primary-1-500"
       >
         <g>
           <path
