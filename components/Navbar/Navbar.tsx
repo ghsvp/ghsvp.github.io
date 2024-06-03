@@ -218,7 +218,7 @@ export function ConstNavbar() {
           icon: "star",
         },
         {
-          text: "Contact US",
+          text: "Contact Us",
           href: "/contact",
           icon: "email",
         },
