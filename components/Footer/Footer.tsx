@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="text-primary-1-500 text-lg font-bold flex flex-row gap-2">
               GHSVP
               <a
-                href="https://www.instagram.com/ghsvp/"
+                href="https://www.instagram.com/ga.hs.voterproject/"
                 target="_blank"
                 rel="noreferrer"
               >
