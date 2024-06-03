@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "..";
 import Image from "next/image";
-import now from "./voter.jpeg";
+import now from "@/public/gsmst-drive/gsmst-drive-1.jpg";
 
 export default function Hero() {
   const textClass =
