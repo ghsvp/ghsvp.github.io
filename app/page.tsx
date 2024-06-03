@@ -5,9 +5,9 @@ export default function Home() {
     <>
       <main className="px-6 md:px-18 max-w-xl md:max-w-5xl xl:max-w-[calc(100%-24rem)] mx-auto space-y-4 md:space-y-8">
         <Hero />
-        <section className="leading-relaxed p-8 bg-primary-2-50 ">
-          <p className="text-sm lg:text-lg">
-            <span className="text-2xl lg:text-3xl font-bold text-primary-2-500">
+        <section className="p-8 bg-primary-2-50 ">
+          <p className="text-sm lg:text-lg leading-7 text-slate-600">
+            <span className="text-2xl lg:text-3xl font-bold text-primary-2-500 mr-1">
               {"The Georgia High School Voting Project "}
             </span>
             is a student-led organization that aims to help Georgia high school

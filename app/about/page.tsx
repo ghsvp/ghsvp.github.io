@@ -30,13 +30,13 @@ export default function About() {
             <span className="font-semibold text-primary-2-500">
               Parv Mahajan:
             </span>
-            <span className="ml-2 text-gray-700">Alumni Founder</span>
+            <span className="ml-2 text-gray-700">Collegiate Head</span>
           </li>
           <li className="flex items-center">
             <span className="font-semibold text-primary-2-500">
               Nicolas Parra:
             </span>
-            <span className="ml-2 text-gray-700">Alumni Founder</span>
+            <span className="ml-2 text-gray-700">Political Head</span>
           </li>
           <li className="flex items-center">
             <span className="font-semibold text-primary-2-500">Yubo Cao:</span>
