@@ -6,6 +6,7 @@ export type LogoProps = {
   className?: string;
   variant?: "logo-only" | "logo-and-text";
   props?: React.HTMLProps<HTMLDivElement>;
+  size?: number;
 };
 
 const assertVariant = (variant: string): void => {
@@ -19,6 +20,7 @@ const assertVariant = (variant: string): void => {
 export default function Logo({
   className,
   variant = "logo-only",
+  size,
   ...props
 }: LogoProps) {
   assertVariant(variant);
@@ -31,8 +33,8 @@ export default function Logo({
       <Image
         src={image}
         alt="Georgia High School Voter Project Logo"
-        width={53.87}
-        height={43.51}
+        width={53.87 * (size ? size : 1)}
+        height={43.51 * (size ? size : 1)}
       />
     </div>
   );
