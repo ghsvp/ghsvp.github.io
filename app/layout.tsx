@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="max-w-full overflow-x-hidden scroll-smooth">
       <body className={`${inter.className} max-w-full overflow-x-hidden h-[100vh]`}>
         <ConstNavbar />
-        <div className={`w-[100vw] overflow-x-clip`}>{children}</div>
+        <div className={`w-[100vw] overflow-x-clip mt-16 md:mt-24 lg:mt-24`}>{children}</div>
         <Footer />
       </body>
     </html>

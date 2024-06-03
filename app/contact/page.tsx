@@ -1,7 +1,7 @@
 export default function Contact() {
   // TODO: wind with firebase
   return (
-    <main className="mt-16 md:mt-24 lg:mt-24 p-8 max-w-2xl mx-auto">
+    <main className="p-8 max-w-2xl mx-auto">
       <div className=" bg-primary-1-50 p-8">
         <h1 className="text-3xl font-semibold text-primary-1-500 mb-6 text-center">
           The Georgia High School Voter Project is excited to work with your

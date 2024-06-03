@@ -3,10 +3,10 @@ import { Logo } from "@/components";
 export default function About() {
   return (
     <main className="px-6 md:px-18 mt-28 space-y-4 md:space-y-8">
-      <div className="flex justify-center gap-2 -mb-4">
+      <div className="flex justify-center gap-2 lg:-mb-4">
         <Logo size={4} className="h-32 w-32" />
       </div>
-      <p className="p-8 bg-primary-3-50 leading-relaxed font-normal lg:text-lg text-primary-3-700">
+      <p className="p-8 bg-primary-3-50 leading-relaxed font-normal lg:text-lg text-primary-3-700 max-w-2xl mx-auto">
         The Georgia High School Voter Program is a state-wide and student-led
         voter registration initiative with the potential to empower over 40,000
         students a year. Started by students from Gwinnett County, GHSVP focuses

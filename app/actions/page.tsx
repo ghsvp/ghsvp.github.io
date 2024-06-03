@@ -10,7 +10,7 @@ import image2 from "@/public/gsmst-drive/gsmst-drive-2.jpg";
 
 export default function Actions() {
   return (
-    <main className="mt-16 md:mt-24 lg:mt-24 p-8 max-w-2xl mx-auto">
+    <main className="p-8 max-w-2xl mx-auto">
       <section className="spac-y-2 leading-relaxed bg-primary-1-50 p-8">
         <h1 className="text-primary-1-500">Most Recent Drive</h1>
         <h2 className="text-slate-500 text-sm mb-2">

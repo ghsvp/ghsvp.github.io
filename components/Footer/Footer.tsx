@@ -25,7 +25,7 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
             </div>
-            <div className="text-primary-1-500 text-sm">
+            <div className="text-primary-1-500 hidden md:block text-sm">
               Georgia High School Voter Project
             </div>
           </div>
