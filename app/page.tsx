@@ -1,5 +1,4 @@
 import { Hero } from "@/components";
-import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
             voices heard in the political process.
           </p>
         </section>
-        <Footer />
       </main>
     </>
   );
