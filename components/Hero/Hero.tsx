@@ -37,23 +37,20 @@ export default function Hero() {
     <div className="w-full flex flex-col justify-between items-start gap-4 2xl:w-1/2 flex-grow bg-primary-1-50 p-8">
       <div className="text-left">
         <span className={`text-primary-1-500 ${textClass} capitalize`}>
-          Encouraging high school civic engagement
-          <br />
+          {"Be Heard. "}
         </span>
         <span className={`text-primary-2-500 ${textClass} capitalize`}>
-          Making voter registration easy & accessible
+          {"Be Counted. "}
         </span>
-        <div className="text-slate-600 text-sm lg:text-lg font-normal leading-7 lg:leading-relaxed mt-8">
-          <p>
-            The Georgia High School Voting Project is a student-led organization
-            that aims to help high school students register to vote.
-          </p>
-          <p>
-            We believe that every voice matters, and that every vote counts. Our
-            goal is to help young people make their voices heard in the
-            political process.
-          </p>
-        </div>
+        <span className={`text-primary-3-500 ${textClass} capitalize`}>
+          Be Registered
+        </span>
+        <p className="text-slate-600 text-sm lg:text-lg font-normal leading-7 lg:leading-relaxed mt-8">
+          The Georgia High School Voter Project aims to register every eligible
+          high schooler in Georgia to vote. The organization is based in
+          Gwinnett County at the Gwinnett School of Mathematics, Science, and
+          Technology.
+        </p>
       </div>
 
       <div className="flex flex-row justify-start items-start gap-2">
