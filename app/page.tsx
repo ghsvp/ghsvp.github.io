@@ -1,4 +1,4 @@
-import { Hero } from "@/components";
+import { AnimatedNumber, Hero } from "@/components";
 
 export default function Home() {
   return (
@@ -15,6 +15,10 @@ export default function Home() {
             that every vote counts. Our goal is to help young people make their
             voices heard in the political process.
           </p>
+        </section>
+        <section className="p-8 bg-primary-3-50 flex flex-row gap-4 flex-wrap justify-center">
+          <AnimatedNumber title="Students Registered" number={108} />
+          <AnimatedNumber title="Registration Rate" number={90} />
         </section>
       </main>
     </>
