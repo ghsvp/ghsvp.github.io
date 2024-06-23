@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "GHSVP",
   description:
-    "Georgia High School Voting Project is a student-led organization that aims to help high school students register to vote.",
+    "Georgia High School Voter Project is a student-led organization that aims to help high school students register to vote.",
 };
 
 export default function RootLayout({

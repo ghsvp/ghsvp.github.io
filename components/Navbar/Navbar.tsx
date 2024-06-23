@@ -205,8 +205,8 @@ export const NavbarData = [
     icon: "info",
   },
   {
-    text: "Past Actions",
-    href: "/actions",
+    text: "Action",
+    href: "/action",
     icon: "history",
   },
   {

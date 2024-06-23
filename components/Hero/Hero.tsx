@@ -23,7 +23,7 @@ export default function Hero() {
         }}
       />
       <h2 className="text-lg font-bold text-primary-1-700 lg:text-3xl mb-2">
-        Voter registration drive
+        Voter Registration Drive
       </h2>
       <p className="text-slate-600 text-sm lg:text-lg font-normal leading-7 lg:leading-relaxed">
         On May 13, 2024, GHSVP hosted a voter registration drive at Gwinnett

@@ -17,7 +17,7 @@ export default function Home() {
           </p>
         </section>
         <section className="p-8 bg-primary-3-50 flex flex-row gap-4 flex-wrap justify-center">
-          <AnimatedNumber title="Students Registered" number={108} />
+          <AnimatedNumber title="Students Registered" number={109} />
           <AnimatedNumber title="Registration Rate" number={90} />
         </section>
       </main>
