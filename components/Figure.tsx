@@ -25,7 +25,7 @@ export default function Figure({
         objectFit="cover"
         className={imageClassName || "aspect-[2/1] object-cover"}
       />
-      <figcaption className="lg:text-lg text-slate-500 mt-2">{caption}</figcaption>
+      <figcaption className=" text-slate-500 mt-2">{caption}</figcaption>
     </figure>
   );
 }

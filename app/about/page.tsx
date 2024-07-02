@@ -1,4 +1,9 @@
-import { Logo } from "@/components";
+import { Logo, TeamCard } from "@/components";
+import mehek from "@/public/team/mehek.jpg";
+import sweat from "@/public/team/sweat.jpg";
+import parv from "@/public/team/parv.jpg";
+import nico from "@/public/team/nico.jpg";
+import yubo from "@/public/team/yubo.png";
 
 export default function About() {
   return (

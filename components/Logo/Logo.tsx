@@ -43,14 +43,14 @@ export default function Logo({
   }
   const text = (
     <div className="flex-col justify-center items-start inline-flex">
-      <div className="text-lg mdtext-xl font-black leading-tight text-primary-1-500">
+      <div className="text-lg mdtext-xl font-black leading-tight">
         GHSVP
       </div>
     </div>
   );
   return (
     <div
-      className="flex items-center justify-center gap-2.5 mdgap-1.5 cursor-pointer"
+      className="flex items-center justify-center gap-2.5 md:gap-1.5 cursor-pointer"
       onClick={() => window.open("/", "_self")}
       {...props}
     >

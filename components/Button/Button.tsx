@@ -41,7 +41,7 @@ export default function Button({
       {...props}
     >
       {text && (
-        <span className="font-normal text-xs leading-normal lg:text-lg lg:leading-7">
+        <span className="font-normal text-xs leading-normal  lg:leading-7">
           {text}
         </span>
       )}

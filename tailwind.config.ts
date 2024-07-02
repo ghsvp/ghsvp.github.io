@@ -64,10 +64,24 @@ const config: Config = {
       },
     },
     fontFamily: {
-      display: ["Inter", "Roboto", "system-ui", "sans-serif"],
-      body: ["Inter", "Roboto", "system-ui", "sans-serif"],
+      display: [
+        "ui-serif",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times",
+        "serif",
+      ],
+      body: [
+        "ui-serif",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times",
+        "serif",
+      ],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

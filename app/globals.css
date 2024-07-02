@@ -25,8 +25,9 @@
 
 /* change rem base on xl */
 
-@screen xl {
+@screen lg {
   :root {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
+

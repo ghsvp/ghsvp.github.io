@@ -9,6 +9,5 @@ export type { LogoProps } from "./Logo/Logo";
 export { default as Marker } from "./Navbar/Marker";
 export type { MarkerProps } from "./Navbar/Marker";
 export { ConstNavbar, default as Navbar } from "./Navbar/Navbar";
-export { default as Team } from "./TeamCard/Team";
 export { default as TeamCard } from "./TeamCard/TeamCard";
-
+export type { TeamCardProps } from "./TeamCard/TeamCard";

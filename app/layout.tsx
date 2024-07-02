@@ -1,9 +1,9 @@
 import { ConstNavbar, Footer } from "@/components";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GHSVP",
@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="max-w-full overflow-x-hidden scroll-smooth">
-      <body className={`${inter.className} max-w-full overflow-x-hidden h-[100vh]`}>
+      <body className={`${font.className} max-w-full overflow-x-hidden h-[100vh]`}>
         <ConstNavbar />
-        <div className={`w-[100vw] overflow-x-clip mt-16 md:mt-24 lg:mt-24`}>{children}</div>
+        <main className={`w-[100vw] overflow-x-clip mt-16 md:mt-24 lg:mt-24`}>{children}</main>
         <Footer />
       </body>
     </html>

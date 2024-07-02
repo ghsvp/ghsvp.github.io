@@ -11,7 +11,7 @@ function year() {
 export default function Footer() {
   return (
     <div>
-      <div className="bg-primary-1-50 p-5 mt-12 px-16 md:px-12">
+      <div className="p-5 mt-12 px-16 md:px-12">
         <div className="flex items-center w-full gap-4">
           <Logo variant="logo-only" className="h-16 w-16" />
           <div className="flex flex-col">
