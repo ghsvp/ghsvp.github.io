@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img from "@/public/gsmst-drive/gsmst-drive-banner.jpg";
+import banner from "@/public/gsmst-drive/banner.jpg";
 
 export default function Resources() {
   return (
@@ -74,7 +74,7 @@ export default function Resources() {
             name.
           </p>
           <figure>
-            <Image src={img} alt="Example banner signed at GSMST voter drive" />
+            <Image src={banner} alt="Example banner signed at GSMST voter drive" />
             <figcaption>Example banner signed at GSMST voter drive</figcaption>
           </figure>
         </li>

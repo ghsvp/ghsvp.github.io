@@ -24,7 +24,7 @@ export default function About() {
         <h2 className="text-2xl lg:text-4xl font-bold text-center text-primary-2-500 mb-2">
           Meet the Team
         </h2>
-        <div className="flex flex-wrap justify-center w-full gap-4">
+        <div className="flex flex-wrap justify-center w-full gap-4 max-w-2xl mx-auto">
           {/* TODO: To be fixed */}
           <TeamCard
             name="Mehek Saha"
