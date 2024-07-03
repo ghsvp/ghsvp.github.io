@@ -3,7 +3,7 @@ import { AnimatedNumber, Hero } from "@/components";
 export default function Home() {
   return (
     <>
-      <div className="px-6 md:px-18 max-w-2xl mx-auto md:space-y-8">
+      <div className="px-4 md:px-18 max-w-2xl mx-auto md:space-y-8">
         <Hero />
         <section className="p-8 leading-7 text-slate-600 text-center flex flex-col gap-2">
           <p className="text-2xl font-bold text-primary-2-500">
@@ -51,7 +51,7 @@ export default function Home() {
           <AnimatedNumber title="Students Registered" number={109} />
           <AnimatedNumber title="Registration Rate" number={90} />
         </section>
-        <section className="p-8 aspect-video ">
+        <section className="aspect-video ">
           <iframe
             src="https://www.youtube.com/embed/UIliH4YSucs"
             title="Gwinnett County Board of Education 5/16/24 - Georgia High School Voter Project"

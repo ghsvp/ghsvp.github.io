@@ -7,11 +7,11 @@ import yubo from "@/public/team/yubo.png";
 
 export default function About() {
   return (
-    <main className="px-6 md:px-18 mt-28 space-y-4 md:space-y-8">
+    <main className="md:px-18 mt-28 space-y-4 px-6 md:space-y-8">
       <div className="flex justify-center gap-2 lg:-mb-4">
         <Logo size={4} className="h-32 w-32" />
       </div>
-      <p className="p-8 leading-relaxed font-normal  text-primary-3-700 max-w-2xl mx-auto">
+      <p className="mx-auto max-w-2xl p-8 font-normal leading-relaxed text-primary-3-700">
         The Georgia High School Voter Program is a state-wide and student-led
         voter registration initiative with the potential to empower over 40,000
         students a year. Started by students from Gwinnett County, GHSVP focuses
@@ -20,11 +20,11 @@ export default function About() {
         dozens of students vote and continues to champion young citizens across
         Georgia.
       </p>
-      <section className="p-6 bg-text-primary-2-50">
-        <h2 className="text-2xl lg:text-4xl font-bold text-center text-primary-2-500 mb-2">
+      <section className="bg-text-primary-2-50 p-6">
+        <h2 className="mb-2 text-center text-2xl font-bold text-primary-2-500 lg:text-4xl">
           Meet the Team
         </h2>
-        <div className="flex flex-wrap justify-center w-full gap-4 max-w-2xl mx-auto">
+        <div className="mx-auto flex w-full max-w-2xl flex-wrap justify-center gap-4">
           {/* TODO: To be fixed */}
           <TeamCard
             name="Mehek Saha"

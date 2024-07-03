@@ -92,7 +92,7 @@ export default function Navbar({ items }: { items: NavbarItemProps[] }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 bg-white shadow-sm z-50 transition-transform ease-in-out flex items-center justify-between sm:gap-16 px-2 sm:px-4 md:px-12 md:py-4`}
+      className={`fixed top-0 left-0 right-0 bg-white shadow-sm z-50 transition-transform ease-in-out flex items-center justify-between sm:gap-16 px-4 md:px-6 md:py-4`}
     >
       <Logo className="flex-none" variant="logo-and-text" />
       <NavbarDesktop

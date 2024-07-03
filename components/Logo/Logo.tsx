@@ -26,7 +26,7 @@ export default function Logo({
   assertVariant(variant);
   const logo = (
     <div
-      className={`flex items-center justify-center h-16 w-16 rounded-full bg-white ${
+      className={`flex items-center justify-center h-10 w-10 sm:h-16 sm:w-16 rounded-full bg-white ${
         variant === "logo-only" && className
       } overflow-clip bg-white`}
     >
@@ -50,7 +50,7 @@ export default function Logo({
   );
   return (
     <div
-      className="flex items-center justify-center gap-2.5 md:gap-1.5 cursor-pointer"
+      className="flex items-center justify-center cursor-pointer gap-1 sm:gap-2"
       onClick={() => window.open("/", "_self")}
       {...props}
     >
