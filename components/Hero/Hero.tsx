@@ -58,11 +58,11 @@ export default function Hero() {
           alt="Vote image from unsplash"
           className="absolute left-0 right-0 -z-10 h-full object-cover brightness-125"
         />
-        <div className="flex max-w-2xl flex-col items-center gap-4 bg-slate-50/50 px-6 py-6 text-center backdrop-blur-md">
-          <h1 className="text-4xl font-bold text-primary-1-500">
+        <div className="flex max-w-2xl flex-col items-center gap-4 px-6 py-6 text-center bg-slate-950/75 backdrop-blur-sm">
+          <h1 className="text-4xl font-bold text-primary-1-200">
             Georgia High School Voter Project
           </h1>
-          <p className="max-w-prose">
+          <p className="max-w-prose text-white">
             is a student-led organization that aims to help Georgia high school
             students register to vote. We believe that every voice matters and
             that every vote counts. Our goal is to help young people make their
