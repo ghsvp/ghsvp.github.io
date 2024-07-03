@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <div className="px-4 md:px-18 max-w-2xl mx-auto md:space-y-8">
         <Hero />
-        <section className="p-8 leading-7 text-slate-600 text-center flex flex-col gap-2">
+        {/* <section className="p-8 leading-7 text-slate-600 text-center flex flex-col gap-2">
           <p className="text-2xl font-bold text-primary-2-500">
             {"The Georgia High School Voter Project "}
           </p>
@@ -15,7 +15,7 @@ export default function Home() {
             that every vote counts. Our goal is to help young people make their
             voices heard in the political process.
           </p>
-        </section>
+        </section> */}
         <section className="p-8 leading-7 text-slate-600 flex flex-col gap-2">
           <h2 className="text-2xl font-bold text-primary-1-500 text-center">
             Registration & Education
