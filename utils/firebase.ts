@@ -21,7 +21,7 @@ export const analytics = isSupported().then((supported) =>
   supported ? getAnalytics(app) : undefined,
 );
 export const functions = getFunctions(app);
-if (location.hostname === "localhost") {
+if (location !== undefined && location.hostname === "localhost") {
   connectFunctionsEmulator(functions, "localhost", 5001);
 }
 
