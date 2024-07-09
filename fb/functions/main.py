@@ -1,3 +1,4 @@
+import json
 import smtplib
 from email.mime.text import MIMEText
 
@@ -8,7 +9,7 @@ initialize_app()
 
 @https_fn.on_request(
     cors=options.CorsOptions(
-        cors_origins=[r"ghsvp\.org"],
+        cors_origins=[r"https://ghsvp\.org", "http://localhost:3000"],
         cors_methods=["get", "post", "options"],
     )
 )
@@ -16,9 +17,11 @@ def contact_us(req: https_fn.Request) -> https_fn.Response:
     if req.method != "POST" or req.headers["content-type"] != "application/json":
         return https_fn.Response(status=400)
 
-    name = req.json["name"]
-    sender_email = req.json["email"]
-    message = req.json["message"]
+    payload = json.loads(req.json["data"])
+    
+    name = payload["name"]
+    sender_email = payload["email"]
+    message = payload["message"]
 
     contact = ["meheksaha101@gmail.com", "cao2006721@gmail.com"]
 

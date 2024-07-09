@@ -1,6 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
-import { getFunctions, httpsCallable } from "firebase/functions";
+import {
+  connectFunctionsEmulator,
+  getFunctions,
+  httpsCallable,
+} from "firebase/functions";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbwQPfziPLbFpZNN3X0xOOQMKoWJvkums",
@@ -17,5 +21,8 @@ export const analytics = isSupported().then((supported) =>
   supported ? getAnalytics(app) : undefined,
 );
 export const functions = getFunctions(app);
+if (location.hostname === "localhost") {
+  connectFunctionsEmulator(functions, "localhost", 5001);
+}
 
 export const contactUs = httpsCallable(functions, "contact_us");

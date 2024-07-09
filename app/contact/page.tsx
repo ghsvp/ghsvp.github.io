@@ -104,12 +104,12 @@ export default function Contact() {
             className="border-transparent inline-flex justify-center border bg-primary-1-500 px-6 py-3 text-lg font-medium text-white shadow-sm hover:bg-primary-1-600 focus:outline-none focus:ring-2 focus:ring-primary-1-500 focus:ring-offset-2"
             onClick={async (e) => {
               e.preventDefault();
-              try {
-                await contactUs(JSON.stringify(formState));
-                alert("Your message has been sent. Thank you for reaching out!");
-              } catch (error) {
-                alert("An error occurred. Please try again later.");
-              }
+              await contactUs(JSON.stringify(formState));
+              setFormState({
+                name: "",
+                email: "",
+                message: "",
+              });
             }}
           >
             Submit
