@@ -1,12 +1,23 @@
+"use client";
+
+import { contactUs } from "@/utils/firebase";
+import { useState } from "react";
+
 export default function Contact() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   return (
-    <main className="p-8 max-w-2xl mx-auto">
+    <main className="mx-auto max-w-2xl p-8">
       <div className="p-8">
-        <h1 className="text-3xl font-semibold text-primary-1-500 mb-6 text-center">
+        <h1 className="mb-6 text-center text-3xl font-semibold text-primary-1-500">
           The Georgia High School Voter Project is excited to work with your
           school or community!
         </h1>
-        <ul className="space-y-4 text-gray-700">
+        <ul className="text-gray-700 space-y-4">
           <li>
             If you are a school administrator, deputy registrar, faculty member,
             or student looking to collaborate with GHSVP, please contact us
@@ -29,11 +40,11 @@ export default function Contact() {
           </li>
         </ul>
       </div>
-      <form className="space-y-6 mt-8">
+      <form className="mt-8 space-y-6">
         <div>
           <label
             htmlFor="name"
-            className="block text-lg font-medium text-gray-700"
+            className="text-gray-700 block text-lg font-medium"
           >
             Name
           </label>
@@ -41,14 +52,18 @@ export default function Contact() {
             type="text"
             id="name"
             name="name"
-            className="mt-1 block w-full p-3 border border-gray-300 focus:ring-primary-1-500 focus:border-primary-1-500"
+            className="border-gray-300 mt-1 block w-full border p-3 focus:border-primary-1-500 focus:ring-primary-1-500"
             required
+            onChange={(e) =>
+              setFormState({ ...formState, name: e.target.value })
+            }
+            value={formState.name}
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-lg font-medium text-gray-700"
+            className="text-gray-700 block text-lg font-medium"
           >
             Email
           </label>
@@ -56,14 +71,18 @@ export default function Contact() {
             type="email"
             id="email"
             name="email"
-            className="mt-1 block w-full p-3 border border-gray-300 focus:ring-primary-1-500 focus:border-primary-1-500"
+            className="border-gray-300 mt-1 block w-full border p-3 focus:border-primary-1-500 focus:ring-primary-1-500"
             required
+            onChange={(e) =>
+              setFormState({ ...formState, email: e.target.value })
+            }
+            value={formState.email}
           />
         </div>
         <div>
           <label
             htmlFor="message"
-            className="block text-lg font-medium text-gray-700"
+            className="text-gray-700 block text-lg font-medium"
           >
             Message
           </label>
@@ -71,14 +90,27 @@ export default function Contact() {
             id="message"
             name="message"
             rows={4}
-            className="mt-1 block w-full p-3 border border-gray-300 focus:ring-primary-1-500 focus:border-primary-1-500"
+            className="border-gray-300 mt-1 block w-full border p-3 focus:border-primary-1-500 focus:ring-primary-1-500"
             required
+            onChange={(e) =>
+              setFormState({ ...formState, message: e.target.value })
+            }
+            value={formState.message}
           ></textarea>
         </div>
         <div className="flex justify-center">
           <button
             type="submit"
-            className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-lg font-medium text-white bg-primary-1-500 hover:bg-primary-1-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-1-500"
+            className="border-transparent inline-flex justify-center border bg-primary-1-500 px-6 py-3 text-lg font-medium text-white shadow-sm hover:bg-primary-1-600 focus:outline-none focus:ring-2 focus:ring-primary-1-500 focus:ring-offset-2"
+            onClick={async (e) => {
+              e.preventDefault();
+              try {
+                await contactUs(JSON.stringify(formState));
+                alert("Your message has been sent. Thank you for reaching out!");
+              } catch (error) {
+                alert("An error occurred. Please try again later.");
+              }
+            }}
           >
             Submit
           </button>

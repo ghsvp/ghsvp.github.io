@@ -19,13 +19,12 @@ export default function Figure({
 }: FigureProps) {
   return (
     <figure className={className} style={style}>
+      <figcaption className=" text-slate-500 mt-2">{caption}</figcaption>
       <Image
         src={src}
         alt={alt || caption}
-        objectFit="cover"
         className={imageClassName || "aspect-[2/1] object-cover"}
       />
-      <figcaption className=" text-slate-500 mt-2">{caption}</figcaption>
     </figure>
   );
 }

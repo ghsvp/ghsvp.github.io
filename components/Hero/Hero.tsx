@@ -1,5 +1,5 @@
 import now from "@/public/gsmst-drive/gsmst-drive-1.jpg";
-import hero from "@/public/hero-bg.jpg";
+import hero from "@/public/hero-bg.png";
 import Image from "next/image";
 
 export default function Hero() {
@@ -56,14 +56,14 @@ export default function Hero() {
         <Image
           src={hero}
           alt="Vote image from unsplash"
-          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-125"
+          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-105"
         />
-        <div className="flex max-w-2xl flex-col items-center gap-4 px-6 py-6 text-center bg-slate-950/75 backdrop-blur-sm">
-          <h1 className="text-4xl font-bold text-primary-1-200">
+        <div className="flex max-w-2xl flex-col items-center gap-4 px-6 py-6 text-center">
+          <h1 className="text-4xl font-bold text-primary-1-600">
             Georgia High School Voter Project
           </h1>
-          <p className="max-w-prose text-white">
-            is a student-led organization that aims to help Georgia high school
+          <p className="max-w-prose text-black">
+            a student-led organization that aims to help Georgia high school
             students register to vote. We believe that every voice matters and
             that every vote counts. Our goal is to help young people make their
             voices heard in the political process.
