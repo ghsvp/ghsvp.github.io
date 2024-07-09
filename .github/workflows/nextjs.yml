@@ -34,7 +34,7 @@ jobs:
       - name: Install bun
         uses: oven-sh/setup-bun@v2
       - name: Install dependencies
-        run: bun install --production && bun pm trust --all
+        run: bun install && bun pm trust --all
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
