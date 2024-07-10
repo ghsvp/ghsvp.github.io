@@ -7,6 +7,8 @@ export interface FigureProps {
   className?: string;
   imageClassName?: string;
   style?: React.CSSProperties;
+  width?: number;
+  height?: number;
 }
 
 export default function Figure({
@@ -16,14 +18,18 @@ export default function Figure({
   className,
   imageClassName,
   style,
+  width,
+  height,
 }: FigureProps) {
   return (
     <figure className={className} style={style}>
-      <figcaption className=" text-slate-500 mt-2">{caption}</figcaption>
+      <figcaption className="text-slate-500 mt-2">{caption}</figcaption>
       <Image
         src={src}
         alt={alt || caption}
         className={imageClassName || "aspect-[2/1] object-cover"}
+        width={width}
+        height={height}
       />
     </figure>
   );

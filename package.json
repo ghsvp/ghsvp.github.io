@@ -16,7 +16,9 @@
     "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-photo-collage": "^1.0.9",
     "sharp": "^0.33.4",
+    "styled-components": "^6.1.11",
     "swiper": "^11.1.4",
     "usehooks-ts": "^3.1.0"
   },

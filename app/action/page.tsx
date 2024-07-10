@@ -5,13 +5,99 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-
-import image1 from "@/public/gsmst-drive/gsmst-drive-1.jpg";
-import image2 from "@/public/gsmst-drive/gsmst-drive-2.jpg";
+import { ReactPhotoCollage } from "react-photo-collage";
 
 export default function Actions() {
   return (
     <main className="mx-auto max-w-2xl p-8">
+      <section className="spac-y-2 p-8 leading-relaxed">
+        <h1 className="text-primary-2-500">Speech at Washington DC</h1>
+        <h2 className="mb-2 text-sm text-slate-500">
+          Russell Senate Building, Washington D.C.
+        </h2>
+        <p className="text-base leading-loose">
+          On June 12, GHSVP attended Senator Ossoff’s Welcome to Washington
+          event at the Russell US Senate Building. Among many other federal and
+          Georgia organizations, GHSVP was able to speak to the senator about
+          the importance of youth civic engagement and share about its work to
+          empower Georgia high schoolers.
+        </p>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          className="relative mt-2 lg:mt-4"
+          modules={[Pagination]}
+          pagination={{
+            clickable: true,
+            renderBullet: (idx, className) =>
+              `<span class="${className}"></span>`,
+          }}
+          wrapperClass="items-end"
+        >
+          <SwiperSlide>
+            <Figure
+              src={"/washington-visit/image1.png"}
+              width={800}
+              height={800}
+              caption={
+                "GHSVP representatives with Senator Ossoff’s Welcome to Washington event at the Russell US Senate Building."
+              }
+              imageClassName="object-cover aspect-1/1"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Figure
+              src={"/washington-visit/image2.png"}
+              width={800}
+              height={800}
+              caption={
+                "GHSVP with Congressman Loudermilk (GA-11) on Capitol Hill discussing the importance of political empowerment of the youth."
+              }
+              imageClassName="object-cover aspect-1/1"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Figure
+              src={"/washington-visit/image3.png"}
+              width={800}
+              height={800}
+              caption={
+                "Thank you to Congresswoman Nikema William and her office for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
+              }
+              imageClassName="object-cover aspect-1/1"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Figure
+              src={"/washington-visit/image4.png"}
+              width={800}
+              height={800}
+              caption={
+                "Thank you to Congresswoman Nikema William and her office for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
+              }
+              imageClassName="object-cover aspect-1/1"
+            />
+          </SwiperSlide>
+        </Swiper>
+        <div className="flex aspect-square w-full mt-2">
+          <ReactPhotoCollage
+            width="100%"
+            height={["50%", "50%"]}
+            layout={[4, 4]}
+            photos={[
+              { source: "/washington-visit/collage/ga-14.webp" },
+              { source: "/washington-visit/collage/ga-03.webp" },
+              { source: "/washington-visit/collage/ga-04.webp" },
+              { source: "/washington-visit/collage/ga-04-plaque.webp" },
+              { source: "/washington-visit/collage/ga-07.webp" },
+              { source: "/washington-visit/collage/ga-07-plaque.webp" },
+              { source: "/washington-visit/collage/ga-08.webp" },
+              { source: "/washington-visit/collage/ga-11.webp" },
+            ]}
+            showNumOfRemainingPhotos={true}
+          />
+        </div>
+      </section>
       <section className="spac-y-2 p-8 leading-relaxed">
         <h1 className="text-primary-2-500">Speech at Board of Education</h1>
         <h2 className="mb-2 text-sm text-slate-500">
@@ -99,18 +185,22 @@ export default function Actions() {
         >
           <SwiperSlide>
             <Figure
-              src={image1}
+              src={"/gsmst-drive/gsmst-drive-1.jpg"}
               caption={
                 "Students learn about becoming a poll worker and the voting process in Georgia."
               }
+              width={5184}
+              height={3456}
             />
           </SwiperSlide>
           <SwiperSlide>
             <Figure
-              src={image2}
+              src={"/gsmst-drive/gsmst-drive-2.jpg"}
               caption={
                 "Nico Parra, a poll manager, explains the administration of elections in Gwinnett County."
               }
+              width={5184}
+              height={3456}
             />
           </SwiperSlide>
         </Swiper>
