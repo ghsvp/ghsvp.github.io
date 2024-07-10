@@ -11,7 +11,7 @@ export default function Actions() {
   return (
     <main className="mx-auto max-w-2xl p-8">
       <section className="spac-y-2 p-8 leading-relaxed">
-        <h1 className="text-primary-2-500">Speech at Washington DC</h1>
+        <h1 className="text-primary-2-500">Invitation to Capital Hill</h1>
         <h2 className="mb-2 text-sm text-slate-500">
           Russell Senate Building, Washington D.C.
         </h2>
