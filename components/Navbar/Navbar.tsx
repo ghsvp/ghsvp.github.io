@@ -1,13 +1,85 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Logo } from "..";
 
 type NavbarItemProps = {
   text: string;
   href: string;
   icon: string;
+};
+
+type NavbarFolderProps = {
+  text: string;
+  items: NavbarItemProps[];
+};
+
+function NavbarFolderDesktop({ text, items }: NavbarFolderProps) {
+  return (
+    <div className="group">
+      <div className="text-sm font-bold leading-7 transition-all group-hover:font-bold">
+        {text}
+      </div>
+      <div className="invisible flex flex-col gap-2 group-hover:visible">
+        {items.map((item) => (
+          <Link href={item.href} key={item.href}>
+            <div className="text-sm font-normal leading-7 transition-all group-hover:font-bold">
+              {item.text}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function NavbarFolderMobile({ text, items }: NavbarFolderProps) {
+  const [expanded, setExpanded] = useState(false);
+}
+
+const NavbarItem = (
+  items: NavbarItemProps,
+  setExpanded: (state: boolean) => void,
+) => {
+  const { icon, text, href } = items;
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setActive(window.location.pathname === href);
+    }
+    const interval = setInterval(() => {
+      setActive(window.location.pathname === href);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [href, setActive]);
+
+  const iconComponent = (
+    <div
+      className={`material-symbols-rounded group-hover:material-symbols-filled flex h-8 w-8 items-center justify-center transition-all`}
+    >
+      {icon}
+    </div>
+  );
+  const textComponent = (
+    <div
+      className={`text-sm font-normal leading-7 transition-all group-hover:font-bold`}
+    >
+      {text}
+    </div>
+  );
+  return (
+    <Link
+      href={href}
+      key={href}
+      className={`group inline-flex w-full items-center justify-start gap-1 px-2 py-1 text-lg transition-all ease-in-out ${active && "rounded-full bg-primary-1-100 text-primary-1-700"}`}
+      onClick={() => setExpanded(false)}
+    >
+      {iconComponent}
+      {textComponent}
+    </Link>
+  );
 };
 
 function NavbarMobile({
@@ -19,34 +91,6 @@ function NavbarMobile({
   expanded: boolean;
   setExpanded: (expanded: boolean) => void;
 }) {
-  const NavbarItem = (items: NavbarItemProps) => {
-    const { icon, text, href } = items;
-    const iconComponent = (
-      <div
-        className={`material-symbols-rounded group-hover:material-symbols-filled flex h-8 w-8 items-center justify-center transition-all`}
-      >
-        {icon}
-      </div>
-    );
-    const textComponent = (
-      <div
-        className={`text-sm font-normal leading-7 transition-all group-hover:font-bold`}
-      >
-        {text}
-      </div>
-    );
-    return (
-      <Link
-        href={href}
-        key={href}
-        className={`group inline-flex items-center justify-start gap-2 transition-all ease-in-out`}
-        onClick={() => setExpanded(false)}
-      >
-        {iconComponent}
-        {textComponent}
-      </Link>
-    );
-  };
   return (
     <>
       <div
@@ -54,12 +98,21 @@ function NavbarMobile({
           expanded ? "translate-x-0" : "-translate-x-full"
         } fixed left-0 top-0 z-50 bg-slate-50 transition-transform ease-in-out sm:invisible`}
       >
-        <div className="ml-12 mt-12 flex flex-col items-start justify-start gap-4">
-          {items.map(NavbarItem)}
+        <div className="ml-2 mr-2 mt-2 flex flex-col items-start justify-start gap-2">
+          <div className="p-2">
+            <div
+              className={`material-symbols-rounded group-hover:material-symbols-filled flex h-8 w-8 items-center justify-center rounded-full ring-1 ring-slate-300 transition-all`}
+              onClick={() => setExpanded(false)}
+            >
+              menu_open
+            </div>
+          </div>
+
+          {items.map((item) => NavbarItem(item, setExpanded))}
         </div>
       </div>
       <div
-        className={`bg-black fixed bottom-0 left-0 right-0 top-0 z-40 h-[100vh] w-[100vw] bg-opacity-50 backdrop-blur-sm transition-opacity ease-in-out ${
+        className={`bg-slate-900 fixed bottom-0 left-0 right-0 top-0 z-40 h-[100vh] w-[100vw] bg-opacity-50 backdrop-blur-sm transition-opacity ease-in-out ${
           expanded ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setExpanded(false)}
@@ -75,7 +128,7 @@ function NavbarDesktop({ items }: { items: NavbarItemProps[] }) {
         const { text, href } = item;
         return (
           <Link
-            className={`text-base font-bold leading-none text-slate-600 transition-all ease-in-out hover:text-slate-800`}
+            className={`text-sm font-bold leading-none text-slate-600 transition-all ease-in-out hover:text-slate-800`}
             href={href}
             key={href}
           >
@@ -92,7 +145,7 @@ export default function Navbar({ items }: { items: NavbarItemProps[] }) {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-white px-4 shadow-sm transition-transform ease-in-out sm:gap-16 md:px-6`}
+      className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-white px-4 py-2 shadow-sm transition-transform ease-in-out sm:gap-16 md:px-6`}
     >
       <Logo className="flex-none" variant="logo-and-text" />
       <NavbarDesktop
@@ -145,6 +198,7 @@ export const NavbarData = [
     href: "/contact",
     icon: "email",
   },
+  // TODO: make a nested navbar
 ];
 
 export function ConstNavbar() {

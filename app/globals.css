@@ -5,7 +5,11 @@
 
 @layer components {
   .material-symbols-filled {
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
   }
 
   h1 {
@@ -25,9 +29,18 @@
 
 /* change rem base on xl */
 
+:root {
+  font-size: 18px;
+}
+
+@screen sm {
+  :root {
+    font-size: 18px;
+  }
+}
+
 @screen lg {
   :root {
     font-size: 28px;
   }
 }
-

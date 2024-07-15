@@ -12,7 +12,7 @@ export default function Contact() {
 
   return (
     <main className="mx-auto max-w-2xl p-8">
-      <div className="p-8">
+      <div className="sm:p-8">
         <h1 className="mb-6 text-center text-3xl font-semibold text-primary-1-500">
           The Georgia High School Voter Project is excited to work with your
           school or community!

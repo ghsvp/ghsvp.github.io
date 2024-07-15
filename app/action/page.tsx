@@ -8,7 +8,7 @@ import "swiper/swiper-bundle.css";
 
 export default function Actions() {
   return (
-    <main className="mx-auto max-w-4xl p-8">
+    <main className="mx-auto max-w-4xl md:p-8">
       <section className="spac-y-2 p-8 leading-relaxed">
         <h1 className="text-primary-2-500">
           Senator Ossoff&apos;s Welcome to Washington Event
@@ -181,7 +181,7 @@ export default function Actions() {
           className="my-8"
         />
         {/* <hr /> */}
-        {/* TODO: MEOW */}
+        {/* TODO: Add a collage */}
       </section>
     </main>
   );

@@ -11,9 +11,9 @@ function year() {
 export default function Footer() {
   return (
     <div>
-      <div className="p-5 mt-12 px-6 md:px-8">
+      <div className="pb-6 sm:mt-12 px-6 md:px-8">
         <div className="flex items-center w-full gap-4">
-          <Logo variant="logo-only" className="h-16 w-16" />
+          <Logo variant="logo-only" />
           <div className="flex flex-col">
             <div className="text-primary-1-500 text-lg font-bold flex flex-row gap-2">
               GHSVP

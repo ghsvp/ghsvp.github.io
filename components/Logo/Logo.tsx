@@ -26,15 +26,15 @@ export default function Logo({
   assertVariant(variant);
   const logo = (
     <div
-      className={`flex items-center justify-center h-10 w-10 sm:h-16 sm:w-16 rounded-full bg-white ${
+      className={`flex items-center justify-center h-10 w-10 rounded-full bg-white ${
         variant === "logo-only" && className
       } overflow-clip bg-white`}
     >
       <Image
         src={image}
         alt="Georgia High School Voter Project Logo"
-        width={53.87 * (size ? size : 1)}
-        height={43.51 * (size ? size : 1)}
+        width={48 * (size ? size : 1)}
+        height={48 * (size ? size : 1)}
       />
     </div>
   );
@@ -50,7 +50,7 @@ export default function Logo({
   );
   return (
     <div
-      className="flex items-center justify-center cursor-pointer gap-1 sm:gap-2"
+      className="flex items-center justify-center cursor-pointer gap-2"
       onClick={() => window.open("/", "_self")}
       {...props}
     >

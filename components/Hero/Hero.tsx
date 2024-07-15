@@ -4,11 +4,10 @@ import hero_phone from "@/public/hero-phone.png";
 import Image from "next/image";
 
 export default function Hero() {
-  const textClass =
-    "text-4xl font-extrabold leading-snug lg:leading-tight";
+  const textClass = "text-4xl font-extrabold leading-snug lg:leading-tight";
 
   const image = (
-    <div className="w-full p-8 px-4 2xl:w-1/2">
+    <div className="w-full p-8 px-4 mx-auto max-w-4xl">
       <h1 className="text-2xl font-bold text-primary-1-700">Happening Now</h1>
       <Image
         src={now}
@@ -30,15 +29,15 @@ export default function Hero() {
   );
 
   const content = (
-    <div className="flex w-full flex-grow flex-col items-start justify-between gap-4 p-8 px-4 2xl:w-1/2">
+    <div className="flex w-full flex-grow flex-col items-start justify-between gap-4 bg-primary-1-50 p-8 px-8 max-w-4xl mx-auto">
       <div className="text-left">
-        <div className={`text-primary-1-500 ${textClass} capitalize`}>
+        <div className={`text-primary-1-500 ${textClass} inline capitalize`}>
           {"Be Heard. "}
         </div>
-        <div className={`text-primary-2-500 ${textClass} capitalize`}>
+        <div className={`text-primary-2-500 ${textClass} inline capitalize`}>
           {"Be Counted. "}
         </div>
-        <div className={`text-primary-3-500 ${textClass} capitalize`}>
+        <div className={`text-primary-3-500 ${textClass} inline capitalize`}>
           Be Registered.
         </div>
         <p className="mt-2 text-sm font-normal leading-loose text-slate-600 lg:mt-4">
@@ -57,7 +56,7 @@ export default function Hero() {
         <Image
           src={hero}
           alt="Vote image from unsplash"
-          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-105 hidden sm:block"
+          className="absolute left-0 right-0 -z-10 hidden h-full object-cover brightness-105 sm:block"
         />
         <Image
           src={hero_phone}
@@ -68,7 +67,7 @@ export default function Hero() {
           <h1 className="text-4xl font-bold text-primary-1-600">
             Georgia High School Voter Project
           </h1>
-          <p className="max-w-prose text-black">
+          <p className="text-black max-w-prose">
             a student-led organization that aims to help Georgia high school
             students register to vote. We believe that every voice matters and
             that every vote counts. Our goal is to help young people make their
@@ -76,9 +75,9 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="h-[90vh]"></div>
-      <div className="flex flex-col gap-8 mt-32 lg:justify-between 2xl:flex-row-reverse 2xl:gap-8 mx-auto max-w-4xl">
-        {content}
+      <div className="h-[100vh]"></div>
+      <div className="mx-auto flex flex-col lg:justify-between">
+        <div className="bg-primary-1-50 w-[100vw]">{content}</div>
         {image}
       </div>
     </>

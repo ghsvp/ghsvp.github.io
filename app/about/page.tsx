@@ -7,7 +7,7 @@ import yubo from "@/public/team/yubo.png";
 
 export default function About() {
   return (
-    <main className="md:px-18 mt-28 space-y-4 px-6 md:space-y-8">
+    <main className="md:px-18 mt-28 space-y-4 sm:px-6 md:space-y-8">
       <div className="flex justify-center gap-2 lg:-mb-4">
         <Logo size={4} className="h-32 w-32" />
       </div>
