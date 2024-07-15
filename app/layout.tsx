@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="max-w-full overflow-x-hidden scroll-smooth">
-      <body className={`${font.className} max-w-full overflow-x-hidden`}>
+      <body className={`${font.className} max-w-full overflow-x-hidden bg-primary-1-100`}>
         <ConstNavbar />
-        <main className={`w-[100vw] overflow-x-clip mt-16 md:mt-24 lg:mt-24`}>{children}</main>
+        <main className={`w-[100vw] overflow-x-clip mt-12 `}>{children}</main>
         <Footer />
       </body>
     </html>

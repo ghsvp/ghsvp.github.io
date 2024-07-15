@@ -23,7 +23,7 @@ export default function Figure({
 }: FigureProps) {
   return (
     <figure className={className} style={style}>
-      <figcaption className="text-slate-500 mt-2">{caption}</figcaption>
+      <figcaption className="text-slate-500 mb-4">{caption}</figcaption>
       <Image
         src={src}
         alt={alt || caption}

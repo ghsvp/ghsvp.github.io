@@ -1,5 +1,6 @@
 import now from "@/public/gsmst-drive/gsmst-drive-1.jpg";
 import hero from "@/public/hero-bg.png";
+import hero_phone from "@/public/hero-phone.png";
 import Image from "next/image";
 
 export default function Hero() {
@@ -56,7 +57,12 @@ export default function Hero() {
         <Image
           src={hero}
           alt="Vote image from unsplash"
-          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-105"
+          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-105 hidden sm:block"
+        />
+        <Image
+          src={hero_phone}
+          alt="Vote image from unsplash"
+          className="absolute left-0 right-0 -z-10 h-full object-cover brightness-105 sm:hidden"
         />
         <div className="flex max-w-2xl flex-col items-center gap-4 px-6 py-6 text-center">
           <h1 className="text-4xl font-bold text-primary-1-600">
@@ -70,8 +76,8 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="h-[100vh]"></div>
-      <div className="mt-24 flex flex-col gap-8 md:mt-32 lg:justify-between 2xl:flex-row-reverse 2xl:gap-8">
+      <div className="h-[90vh]"></div>
+      <div className="flex flex-col gap-8 mt-32 lg:justify-between 2xl:flex-row-reverse 2xl:gap-8 mx-auto max-w-4xl">
         {content}
         {image}
       </div>

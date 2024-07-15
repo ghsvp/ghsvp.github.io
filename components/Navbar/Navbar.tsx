@@ -23,7 +23,7 @@ function NavbarMobile({
     const { icon, text, href } = items;
     const iconComponent = (
       <div
-        className={`w-8 h-8 flex items-center justify-center material-symbols-rounded transition-all group-hover:material-symbols-filled`}
+        className={`material-symbols-rounded group-hover:material-symbols-filled flex h-8 w-8 items-center justify-center transition-all`}
       >
         {icon}
       </div>
@@ -39,7 +39,7 @@ function NavbarMobile({
       <Link
         href={href}
         key={href}
-        className={`justify-start items-center gap-2 inline-flex group transition-all ease-in-out`}
+        className={`group inline-flex items-center justify-start gap-2 transition-all ease-in-out`}
         onClick={() => setExpanded(false)}
       >
         {iconComponent}
@@ -50,17 +50,17 @@ function NavbarMobile({
   return (
     <>
       <div
-        className={`w-64 h-[100vh] bg-white rounded-tr-2xl rounded-br-2xl shadow ${
+        className={`h-[100vh] w-64 rounded-br-2xl rounded-tr-2xl bg-white shadow ${
           expanded ? "translate-x-0" : "-translate-x-full"
-        } fixed top-0 left-0 z-50 transition-transform ease-in-out bg-slate-50 sm:invisible`}
+        } fixed left-0 top-0 z-50 bg-slate-50 transition-transform ease-in-out sm:invisible`}
       >
-        <div className="flex-col justify-start items-start gap-4 flex ml-12 mt-12">
+        <div className="ml-12 mt-12 flex flex-col items-start justify-start gap-4">
           {items.map(NavbarItem)}
         </div>
       </div>
       <div
-        className={`fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-black bg-opacity-50 backdrop-blur-sm z-40 transition-opacity ease-in-out ${
-          expanded ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`bg-black fixed bottom-0 left-0 right-0 top-0 z-40 h-[100vh] w-[100vw] bg-opacity-50 backdrop-blur-sm transition-opacity ease-in-out ${
+          expanded ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setExpanded(false)}
       />
@@ -70,12 +70,12 @@ function NavbarMobile({
 
 function NavbarDesktop({ items }: { items: NavbarItemProps[] }) {
   return (
-    <div className="items-center justify-between h-16 invisible sm:visible sm:flex w-96">
+    <div className="invisible h-12 w-96 items-center justify-between sm:visible sm:flex">
       {items.map((item: NavbarItemProps) => {
         const { text, href } = item;
         return (
           <Link
-            className={`transition-all ease-in-out text-slate-600 text-base font-bold leading-none hover:text-slate-800`}
+            className={`text-base font-bold leading-none text-slate-600 transition-all ease-in-out hover:text-slate-800`}
             href={href}
             key={href}
           >
@@ -92,7 +92,7 @@ export default function Navbar({ items }: { items: NavbarItemProps[] }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 bg-white shadow-sm z-50 transition-transform ease-in-out flex items-center justify-between sm:gap-16 px-4 md:px-6 md:py-4`}
+      className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-white px-4 shadow-sm transition-transform ease-in-out sm:gap-16 md:px-6`}
     >
       <Logo className="flex-none" variant="logo-and-text" />
       <NavbarDesktop
@@ -108,10 +108,10 @@ export default function Navbar({ items }: { items: NavbarItemProps[] }) {
         setExpanded={setExpanded}
       />
       <button
-        className="flex items-center justify-center sm:hidden w-12 h-12 cursor-pointer"
+        className="flex h-12 w-12 cursor-pointer items-center justify-center sm:hidden"
         onClick={() => setExpanded(!expanded)}
       >
-        <span className="material-symbols-rounded w-6 h-6">
+        <span className="material-symbols-rounded h-6 w-6">
           {expanded ? "menu_open" : "menu"}
         </span>
       </button>
@@ -126,11 +126,6 @@ export const NavbarData = [
     icon: "home",
   },
   {
-    text: "About Us",
-    href: "/about",
-    icon: "info",
-  },
-  {
     text: "Action",
     href: "/action",
     icon: "history",
@@ -139,6 +134,11 @@ export const NavbarData = [
     text: "Get Involved",
     href: "/resources",
     icon: "star",
+  },
+  {
+    text: "About Us",
+    href: "/about",
+    icon: "info",
   },
   {
     text: "Contact Us",

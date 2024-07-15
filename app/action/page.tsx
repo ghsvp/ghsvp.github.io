@@ -1,96 +1,85 @@
 "use client";
 
 import Figure from "@/components/Figure";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+import Image from "next/image";
 import { ReactPhotoCollage } from "react-photo-collage";
+import "swiper/css/pagination";
+import "swiper/swiper-bundle.css";
 
 export default function Actions() {
   return (
-    <main className="mx-auto max-w-2xl p-8">
+    <main className="mx-auto max-w-4xl p-8">
       <section className="spac-y-2 p-8 leading-relaxed">
-        <h1 className="text-primary-2-500">Invitation to Capital Hill</h1>
+        <h1 className="text-primary-2-500">
+          Senator Ossoff&apos;s Welcome to Washington Event
+        </h1>
         <h2 className="mb-2 text-sm text-slate-500">
           Russell Senate Building, Washington D.C.
         </h2>
-        <p className="text-base leading-loose">
+        <p className="mb-8 text-base leading-loose">
           On June 12, GHSVP attended Senator Ossoff’s Welcome to Washington
           event at the Russell US Senate Building. Among many other federal and
-          Georgia organizations, GHSVP was able to speak to the senator about
+          Georgia organizations, GHSVP was able to speak to Senator Ossoff about
           the importance of youth civic engagement and share about its work to
           empower Georgia high schoolers.
         </p>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          className="relative mt-2 lg:mt-4"
-          modules={[Pagination]}
-          pagination={{
-            clickable: true,
-            renderBullet: (idx, className) =>
-              `<span class="${className}"></span>`,
-          }}
-          wrapperClass="items-end"
-        >
-          <SwiperSlide>
-            <Figure
-              src={"/washington-visit/image1.png"}
-              width={800}
-              height={800}
-              caption={
-                "GHSVP representatives with Senator Ossoff’s Welcome to Washington event at the Russell US Senate Building."
-              }
-              imageClassName="object-cover aspect-1/1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Figure
-              src={"/washington-visit/image2.png"}
-              width={800}
-              height={800}
-              caption={
-                "GHSVP with Congressman Loudermilk (GA-11) on Capitol Hill discussing the importance of political empowerment of the youth."
-              }
-              imageClassName="object-cover aspect-1/1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Figure
-              src={"/washington-visit/image3.png"}
-              width={800}
-              height={800}
-              caption={
-                "Thank you to Congresswoman Nikema William and her office for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
-              }
-              imageClassName="object-cover aspect-1/1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Figure
-              src={"/washington-visit/image4.png"}
-              width={800}
-              height={800}
-              caption={
-                "Thank you to Congresswoman Nikema William and her office for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
-              }
-              imageClassName="object-cover aspect-1/1"
-            />
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex aspect-square w-full mt-2">
+        <Figure
+          src={"/washington-visit/image1.png"}
+          width={2400}
+          height={2400}
+          caption={
+            "GHSVP representatives with Senator Ossoff’s Welcome to Washington event at the Russell US Senate Building."
+          }
+          imageClassName="object-cover aspect-square md:aspect-[4/3]"
+          className="my-8"
+        />
+      </section>
+      <section className="spac-y-2 p-8 leading-relaxed">
+        <h1 className="text-primary-1-500">Invitation to Capital Hill</h1>
+        <h2 className="mb-2 text-sm text-slate-500">
+          Rayburn US House of Representatives Building, Washington D.C.
+        </h2>
+        <Figure
+          src={"/washington-visit/image2.png"}
+          width={2400}
+          height={2400}
+          caption={
+            "GHSVP with Congressman Loudermilk (GA-11) on Capitol Hill discussing the importance of political empowerment of the youth."
+          }
+          imageClassName="object-cover aspect-square md:aspect-[4/3]"
+          className="my-8"
+        />
+        <hr />
+        <Figure
+          src={"/washington-visit/image3.png"}
+          width={2400}
+          height={2400}
+          caption={
+            "Thank you to Jake Silverman, head of Congresswoman Nikema William's voting rights team, for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
+          }
+          imageClassName="object-cover aspect-square md:aspect-[4/3]"
+          className="my-8"
+        />
+        <Image
+          src={"/washington-visit/image4.png"}
+          width={2400}
+          height={2400}
+          className="my-8 aspect-square object-cover md:aspect-[4/3]"
+          alt="Thank you to Jake Silverman, head of Congresswoman Nikema William's voting rights team, for giving GHSVP a private tour of the Capitol. GHSVP was fortunate to receive an exclusive visit to the Speaker of the House balcony–overlooking the President’s Inauguration Balcony."
+        />
+        <hr />
+        <div className="mt-8 flex aspect-square w-full">
           <ReactPhotoCollage
             width="100%"
             height={["50%", "50%"]}
-            layout={[4, 4]}
+            layout={[2, 2]}
             photos={[
               { source: "/washington-visit/collage/ga-14.webp" },
               { source: "/washington-visit/collage/ga-03.webp" },
               { source: "/washington-visit/collage/ga-04.webp" },
-              { source: "/washington-visit/collage/ga-04-plaque.webp" },
+              // { source: "/washington-visit/collage/ga-04-plaque.webp" },
               { source: "/washington-visit/collage/ga-07.webp" },
-              { source: "/washington-visit/collage/ga-07-plaque.webp" },
+              // { source: "/washington-visit/collage/ga-07-plaque.webp" },
               { source: "/washington-visit/collage/ga-08.webp" },
               { source: "/washington-visit/collage/ga-11.webp" },
             ]}
@@ -105,12 +94,12 @@ export default function Actions() {
         </h2>
         <p className="text-base leading-loose">
           On May 16, GHSVP spoke at the Gwinnett County Board of Education.
-          Mehek Saha, the founder of GHSVP, shared the organization’s vision and
-          urged Gwinnett to serve as the blueprint for youth civic engagement.
+          Mehek Saha shared the organization’s vision and urged Gwinnett to
+          serve as the blueprint for youth civic engagement.
         </p>
         <blockquote className="relative bg-primary-2-50 p-2 lg:p-4">
           <svg
-            className="absolute -start-6 top-0 size-16 text-primary-2-200"
+            className="absolute -start-8 top-0 size-16 text-primary-2-200"
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -123,7 +112,7 @@ export default function Actions() {
               fill="currentColor"
             ></path>
           </svg>
-          <div className="relative z-10">
+          <div className="relative z-10 pl-4">
             We come here today in hopes that the Board of Education shares our
             vision to register and educate new voters… We know that a registered
             graduate is a graduate more engaged with their values, their
@@ -145,7 +134,7 @@ export default function Actions() {
           ></iframe>
         </div>
         <p className="text-base leading-loose">
-          The Board Vice Chair, Karen Mulzac Watkins, used her commentary time
+          Karen Mulzac Watkins, the Board Vice Chair, used her commentary time
           to recognize the importance of this student initiative:
         </p>
         <blockquote className="border-l-4 border-primary-2-500 pl-2 leading-loose lg:pl-4">
@@ -172,38 +161,27 @@ export default function Actions() {
           <span className="font-bold">over 90%.</span>
         </p>
 
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          className="relative mt-2 lg:mt-4"
-          modules={[Pagination]}
-          pagination={{
-            clickable: true,
-            renderBullet: (idx, className) =>
-              `<span class="${className}"></span>`,
-          }}
-        >
-          <SwiperSlide>
-            <Figure
-              src={"/gsmst-drive/gsmst-drive-1.jpg"}
-              caption={
-                "Students learn about becoming a poll worker and the voting process in Georgia."
-              }
-              width={5184}
-              height={3456}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Figure
-              src={"/gsmst-drive/gsmst-drive-2.jpg"}
-              caption={
-                "Nico Parra, a poll manager, explains the administration of elections in Gwinnett County."
-              }
-              width={5184}
-              height={3456}
-            />
-          </SwiperSlide>
-        </Swiper>
+        <Figure
+          src={"/gsmst-drive/gsmst-drive-1.jpg"}
+          caption={
+            "Students learn about becoming a poll worker and the voting process in Georgia."
+          }
+          width={5184}
+          height={3456}
+          className="my-8"
+        />
+        <hr />
+        <Figure
+          src={"/gsmst-drive/gsmst-drive-2.jpg"}
+          caption={
+            "Nico Parra, a poll manager, explains the administration of elections in Gwinnett County."
+          }
+          width={5184}
+          height={3456}
+          className="my-8"
+        />
+        {/* <hr /> */}
+        {/* TODO: MEOW */}
       </section>
     </main>
   );

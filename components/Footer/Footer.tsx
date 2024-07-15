@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-primary-1-100 p-5 px-6 md:px-8">
+      <div className="bg-primary-1-200 p-5 px-6 md:px-8">
         <div className="flex flex-col md:flex-row items-start justify-between">
           <div className="text-primary-1-500 text-sm">© {year()} GHSVP</div>
           <div className="flex gap-4">
