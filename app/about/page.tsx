@@ -3,6 +3,7 @@ import mehek from "@/public/team/mehek.jpg";
 import sweat from "@/public/team/sweat.jpg";
 import parv from "@/public/team/parv.jpg";
 import nico from "@/public/team/nico.jpg";
+import grayson from "@/public/team/grayson.jpg";
 import yubo from "@/public/team/yubo.png";
 
 export default function About() {
@@ -25,7 +26,6 @@ export default function About() {
           Meet the Team
         </h2>
         <div className="mx-auto flex w-full max-w-2xl flex-wrap justify-center gap-4">
-          {/* TODO: To be fixed */}
           <TeamCard
             name="Mehek Saha"
             role="Founder & President"
@@ -42,8 +42,13 @@ export default function About() {
             name="Parv Mahajan"
             role="Collegiate Head"
             img={parv}
-            biography="Parv Mahajan is a college freshman at the Georgia Institute of Technology. Through his work running the largest high-school Model United Nations conference in Georgia, he has seen the need for grassroots youth voter education first-hand. He now coordinates efforts between state resources, college volunteers, and local GHSVP drives to better reach a wide swath of students. 
-"
+            biography="Parv Mahajan is a college freshman at the Georgia Institute of Technology. Through his work running the largest high-school Model United Nations conference in Georgia, he has seen the need for grassroots youth voter education first-hand. He now coordinates efforts between state resources, college volunteers, and local GHSVP drives to better reach a wide swath of students."
+          />
+          <TeamCard
+            name="Grayson Peters"
+            role="Collegiate Head"
+            img={grayson}
+            biography="Grayson Peters is a freshman at the Georgia Institute of Technology. Grayson served as the Vice President of the Georgia Association of Student Councils, where he developed a passion for student leadership and civic engagement. As an alumni of Houston County High School, Grayson coordinates GHSVP civic engagement efforts support students, not just in the metro-Atlanta area, but in all regions of the state"
           />
           {/* TODO: Finish Nico */}
           {/* <TeamCard
