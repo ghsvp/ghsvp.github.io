@@ -11,11 +11,11 @@ function year() {
 export default function Footer() {
   return (
     <div>
-      <div className="pb-6 sm:mt-12 px-6 md:px-8">
-        <div className="flex items-center w-full gap-4">
+      <div className="px-6 pb-6 sm:mt-12 md:px-8">
+        <div className="flex w-full items-center gap-4">
           <Logo variant="logo-only" />
           <div className="flex flex-col">
-            <div className="text-primary-1-500 text-lg font-bold flex flex-row gap-2">
+            <div className="flex flex-row gap-2 text-lg font-bold text-primary-1-500">
               GHSVP
               <a
                 href="https://www.instagram.com/ga.hs.voterproject/"
@@ -25,31 +25,33 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
             </div>
-            <div className="text-primary-1-500 hidden md:block text-sm">
+            <div className="hidden text-sm text-primary-1-500 md:block">
               Georgia High School Voter Project
             </div>
           </div>
         </div>
       </div>
       <div className="bg-primary-1-200 p-5 px-6 md:px-8">
-        <div className="flex flex-col md:flex-row items-start justify-between">
-          <div className="text-primary-1-500 text-sm">© {year()} GHSVP</div>
+        <div className="flex flex-col items-start justify-between md:flex-row">
+          <div className="text-sm text-primary-1-500">© {year()} GHSVP</div>
           <div className="flex gap-4">
-            {NavbarData.map((item) => (
-              <Link
-                key={item.href}
-                href={`#${item.href}`}
-                className="text-primary-1-500 text-sm"
-              >
-                <span className="hidden md:block">{item.text}</span>
-                <div
-                  className={`w-8 h-8 flex items-center justify-center material-symbols-rounded transition-all group-hover:material-symbols-filled
-                  } md:hidden`}
-                >
-                  {item.icon}
-                </div>
-              </Link>
-            ))}
+            {NavbarData.map(
+              (item) =>
+                "href" in item && (
+                  <Link
+                    key={item.href}
+                    href={`#${item.href}`}
+                    className="text-sm text-primary-1-500"
+                  >
+                    <span className="hidden md:block">{item.text}</span>
+                    <div
+                      className={`material-symbols-rounded group-hover:material-symbols-filled } flex h-8 w-8 items-center justify-center transition-all md:hidden`}
+                    >
+                      {item.icon}
+                    </div>
+                  </Link>
+                ),
+            )}
           </div>
         </div>
       </div>
