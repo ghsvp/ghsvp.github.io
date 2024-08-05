@@ -48,7 +48,7 @@ export default function About() {
             name="Grayson Peters"
             role="Collegiate Head"
             img={grayson}
-            biography="Grayson Peters is a freshman at the Georgia Institute of Technology. Grayson served as the Vice President of the Georgia Association of Student Councils, where he developed a passion for student leadership and civic engagement. As an alumni of Houston County High School, Grayson coordinates GHSVP civic engagement efforts support students, not just in the metro-Atlanta area, but in all regions of the state"
+            biography="Grayson Peters is a freshman at the Georgia Institute of Technology. Grayson served as the Vice President of the Georgia Association of Student Councils, where he developed a passion for student leadership and civic engagement. As an alumni of Houston County High School, Grayson coordinates GHSVP civic engagement efforts support students, beyond the metro-Atlanta area and in all regions of the state."
           />
           {/* TODO: Finish Nico */}
           {/* <TeamCard
