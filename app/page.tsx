@@ -49,10 +49,10 @@ export default function Home() {
             </p>
           </section>
         </div>
-        <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
+        {/* <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
           <AnimatedNumber title="Students Registered" number={109} />
           <AnimatedNumber title="Registration Rate" number={90} />
-        </section>
+        </section> */}
         {/* <section className="aspect-video ">
           <iframe
             src="https://www.youtube.com/embed/UIliH4YSucs"
