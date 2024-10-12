@@ -3,7 +3,7 @@ import mehek from "@/public/team/mehek.jpg";
 import sweat from "@/public/team/sweat.jpg";
 import parv from "@/public/team/parv.jpg";
 import nico from "@/public/team/nico.jpg";
-import grayson from "@/public/team/grayson.jpg";
+import katie from "@/public/team/katie.png";
 import yubo from "@/public/team/yubo.png";
 
 export default function About() {
@@ -44,12 +44,7 @@ export default function About() {
             img={parv}
             biography="Parv Mahajan is a college freshman at the Georgia Institute of Technology. Through his work running the largest high-school Model United Nations conference in Georgia, he has seen the need for grassroots youth voter education first-hand. He now coordinates efforts between state resources, college volunteers, and local GHSVP drives to better reach a wide swath of students."
           />
-          <TeamCard
-            name="Grayson Peters"
-            role="Collegiate Head"
-            img={grayson}
-            biography="Grayson Peters is a freshman at the Georgia Institute of Technology. Grayson served as the Vice President of the Georgia Association of Student Councils, where he developed a passion for student leadership and civic engagement. As an alumni of Houston County High School, Grayson coordinates GHSVP civic engagement efforts support students, beyond the metro-Atlanta area and in all regions of the state."
-          />
+         
           {/* TODO: Finish Nico */}
           {/* <TeamCard
             name="Nico Parra"
@@ -57,6 +52,12 @@ export default function About() {
             img={nico}
             biography="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           /> */}
+          <TeamCard
+            name="Katie Chen"
+            role="Webmaster"
+            img={katie}
+            biography="Katie is a senior at the Gwinnett School of Mathematics, Science, and Technology (GSMST). As president of the CS club, HackGwinnett, and Girls Who Code, she spearheaded initiatives that promote CS education and deeply passionate about using technology to make a difference. She joined GHSVP to help high schoolers make their voices heard in the political process."
+          />
           <TeamCard
             name="Yubo Cao"
             role="Webmaster"
