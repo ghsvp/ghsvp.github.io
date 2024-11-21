@@ -1,5 +1,6 @@
-import { Hero } from "@/components";
-import HeroSwiper from "@/components/HeroSwiper/HeroSwiper";
+import { AnimatedNumber, Hero } from "@/components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Home() {
   return (
@@ -54,13 +55,53 @@ export default function Home() {
           </section>
         </div>
         <div className="bg-primary-1-50"></div>
-        <HeroSwiper />
+        <section className="mx-auto flex max-w-4xl flex-col gap-4 p-8">
+          <h2 className="text-center text-2xl font-bold text-primary-1-700">
+            GHSVP across Georgia
+          </h2>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="mySwiper rounded-lg shadow-md"
+          >
+            <SwiperSlide>
+              <img
+                src="/across-ga/wheeler.png"
+                alt="Wheeler High School"
+                className="h-auto w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/across-ga/burnswick.png"
+                alt="Burnswick High School"
+                className="h-auto w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/across-ga/heritage.png"
+                alt="Heritage High School"
+                className="h-auto w-full object-cover"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </section>
+      </div>
 
-        {/* <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
+      {/* <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
           <AnimatedNumber title="Students Registered" number={109} />
           <AnimatedNumber title="Registration Rate" number={90} />
         </section> */}
-        {/* <section className="aspect-video ">
+      {/* <section className="aspect-video ">
           <iframe
             src="https://www.youtube.com/embed/UIliH4YSucs"
             title="Gwinnett County Board of Education 5/16/24 - Georgia High School Voter Project"
@@ -71,7 +112,6 @@ export default function Home() {
             className="w-full h-full"
           ></iframe>
         </section> */}
-      </div>
     </>
   );
 }

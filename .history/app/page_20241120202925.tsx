@@ -1,5 +1,5 @@
-import { Hero } from "@/components";
-import HeroSwiper from "@/components/HeroSwiper/HeroSwiper";
+import { AnimatedNumber, Hero } from "@/components";
+
 
 export default function Home() {
   return (
@@ -54,13 +54,13 @@ export default function Home() {
           </section>
         </div>
         <div className="bg-primary-1-50"></div>
-        <HeroSwiper />
+  
 
-        {/* <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
+      {/* <section className="flex flex-row flex-wrap justify-center gap-4 p-8">
           <AnimatedNumber title="Students Registered" number={109} />
           <AnimatedNumber title="Registration Rate" number={90} />
         </section> */}
-        {/* <section className="aspect-video ">
+      {/* <section className="aspect-video ">
           <iframe
             src="https://www.youtube.com/embed/UIliH4YSucs"
             title="Gwinnett County Board of Education 5/16/24 - Georgia High School Voter Project"
