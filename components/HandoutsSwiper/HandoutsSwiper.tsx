@@ -23,12 +23,12 @@ const handouts = [
     path: "/handouts/Registration 5 Step Guide - GHSVP.pdf",
     thumbnail: "/handouts/thumbnails/registration-guide.png",
   },
-  // {
-  //   title: "What to do After Registering",
-  //   description: "Next steps after completing your registration",
-  //   path: "/handouts/What to do After Registering Flyer - GHSVP.pdf",
-  //   thumbnail: "/handouts/thumbnails/after-registering.png",
-  // },
+  {
+    title: "What to do After Registering",
+    description: "Next steps after completing your registration",
+    path: "/handouts/What to do After Registering Flyer - GHSVP.pdf",
+    thumbnail: "/handouts/thumbnails/after-registering.png",
+  },
 ];
 
 export default function HandoutsSwiper() {
@@ -53,7 +53,7 @@ export default function HandoutsSwiper() {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
           }}
           autoplay={{
