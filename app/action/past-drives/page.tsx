@@ -8,7 +8,38 @@ export default function Actions() {
   return (
     <main className="mx-auto max-w-4xl md:p-8">
       <section className="spac-y-2 p-8 leading-relaxed">
-        <h1 className="text-primary-1-500">Most Recent Drive</h1>
+        <h1 className="text-primary-1-500">April 26, 2024</h1>
+        <h2 className="mb-2 text-sm text-slate-500">
+          Heritage High School (Conyers, GA)
+        </h2>
+        <p className="text-base leading-loose">
+          GHSVP conducted a voter registration drive at Heritage High School,
+          helping eligible students register to vote and learn about the
+          importance of civic engagement.
+        </p>
+
+        <Figure
+          src={"/heritage-drive/IMG_7564.png"}
+          caption={
+            "Students participating in the voter registration drive at Heritage High School."
+          }
+          width={4032}
+          height={3024}
+          className="my-8"
+        />
+        <hr />
+        <Figure
+          src={"/heritage-drive/IMG_7565.png"}
+          caption={
+            "GHSVP volunteers assisting students with voter registration forms."
+          }
+          width={4032}
+          height={3024}
+          className="my-8"
+        />
+      </section>
+      <section className="spac-y-2 p-8 leading-relaxed">
+        <h1 className="text-primary-1-500">May 13, 2024</h1>
         <h2 className="mb-2 text-sm text-slate-500">
           The Gwinnett School of Mathematics, Science, and Technology
           (Lawrenceville, GA)

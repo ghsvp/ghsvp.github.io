@@ -5,18 +5,21 @@ export default function Home() {
     <>
       <div className="md:px-18 flex flex-col">
         <Hero />
-        {/* <section className="p-8 leading-7 text-slate-600 text-center flex flex-col gap-2">
-          <p className="text-2xl font-bold text-primary-2-500">
-            {"The Georgia High School Voter Project "}
-          </p>
-          <p>
-            is a student-led organization that aims to help Georgia high school
-            students register to vote. We believe that every voice matters and
-            that every vote counts. Our goal is to help young people make their
-            voices heard in the political process.
-          </p>
-        </section> */}
         <div className="bg-primary-1-50">
+          <section className="flex flex-col gap-4 p-8 text-center leading-7 text-slate-600">
+            <video
+              className="mx-auto h-auto w-full max-w-2xl rounded-lg shadow-md"
+              controls
+              preload="auto"
+              poster="/hero-cover.jpg"
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+              <source src="/hero.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+        </div>
+        <div className="">
           <section className="mx-auto flex max-w-4xl flex-col gap-2 p-8 leading-7">
             <h2 className="text-center text-2xl font-bold text-primary-1-700">
               Registration & Education
