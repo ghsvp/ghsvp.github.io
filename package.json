@@ -12,6 +12,7 @@
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/react": "^5.0.1",
     "firebase": "^10.12.3",
+    "lucide-react": "^0.460.0",
     "material-symbols": "^0.14.1",
     "next": "^14.2.4",
     "react": "^18.3.1",

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import banner from "@/public/gsmst-drive/banner.jpg";
+import HandoutsSwiper from "@/components/HandoutsSwiper/HandoutsSwiper";
 
 export default function Resources() {
   return (
@@ -191,6 +192,8 @@ export default function Resources() {
           </ul>
         </li>
       </ul>
+
+      <HandoutsSwiper />
     </main>
   );
 }
