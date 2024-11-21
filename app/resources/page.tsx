@@ -9,6 +9,88 @@ export default function Resources() {
         Are you interested in collaborating with GHSVP to host a voter drive at
         your school? Here is a framework of what to expect!
       </p>
+      {/* PDF Resources Section */}
+      <div className="my-8">
+        <h3 className="text-xl font-bold mb-4">Important Resources</h3>
+        <div className="grid gap-6 mb-8">
+          {/* Admin Packet */}
+          <div className="rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            <h4 className="bg-gray-50 p-4 text-lg font-semibold border-b">
+              Administrative Information Packet
+            </h4>
+            <div className="aspect-[16/9] w-full">
+              <iframe
+                src="/handouts/GHSVP Admin Packet.pdf"
+                className="w-full h-full"
+                allow="fullscreen"
+              />
+            </div>
+            <div className="p-4 bg-gray-50">
+              <a
+                href="/handouts/GHSVP Admin Packet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1"
+              >
+                Open PDF in new tab
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Steps for Drive Packet */}
+          <div className="rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            <h4 className="bg-gray-50 p-4 text-lg font-semibold border-b">
+              Drive Planning Guide
+            </h4>
+            <div className="aspect-[16/9] w-full">
+              <iframe
+                src="/handouts/GHSVP Steps for a Drive Packet.pdf"
+                className="w-full h-full"
+                allow="fullscreen"
+              />
+            </div>
+            <div className="p-4 bg-gray-50">
+              <a
+                href="/handouts/GHSVP Steps for a Drive Packet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1"
+              >
+                Open PDF in new tab
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <h3>GHSVP will provide:</h3>
       <ul>
         <li>
